@@ -67,7 +67,7 @@ const getters = {
             id: 1002,
             parentId: 1000,
             createTime: "0",
-            title: "日历",
+            title: "自定义日历",
             name: 'calendar',
             level: 0,
             sort: 0,

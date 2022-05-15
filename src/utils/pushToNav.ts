@@ -10,7 +10,7 @@ export const pushToNav = function (path: { name: string, path: string, title?: s
   else if (path.name == 'menu') path.title = '菜单列表'
   else if (path.name == 'resource') path.title = '资源列表'
   else if (path.name == 'addMenu') path.title = '编辑菜单'
-  else if (path.name == 'calendar') path.title = '日历'
+  else if (path.name == 'calendar') path.title = '自定义日历'
   else if (path.name == 'editor') path.title = '富文本编辑器'
   else if (path.name == 'upload') path.title = '上传文件'
 
