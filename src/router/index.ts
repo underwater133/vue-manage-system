@@ -66,6 +66,7 @@ const getRoute = () => {
   })
 }
 
+
 router.beforeEach((to, from, next) => {
   const token = localStorage.getItem('token')
   const userinfo = store.state.userinfo

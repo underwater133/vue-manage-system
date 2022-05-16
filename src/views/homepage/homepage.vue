@@ -10,7 +10,14 @@
       <el-main>
         <!-- 面包屑导航 -->
         <Breadcrumb />
-        <router-view></router-view>
+
+        <!-- 动态过渡 -->
+        <router-view v-slot="{ Component, route }">
+          <transition name="fade">
+            <component :is="Component" :key="route.path"  />
+          </transition>
+        </router-view>
+
       </el-main>
     </el-container>
   </div>
@@ -23,5 +30,18 @@ import Breadcrumb from '@/components/Breadcrumb.vue'
 </script>
 
 <style scoped lang="less">
+.fade-enter-from, .fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: all 0.7s ease;
+}
+.fade-leave-active {
+   transition: all 0.3s cubic-bezier(1, 0.6, 0.6, 1);
+}
 
 </style>
