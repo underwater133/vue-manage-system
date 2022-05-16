@@ -28,6 +28,9 @@
             <el-dropdown-item command="index">首页</el-dropdown-item>
           </el-dropdown-menu>
           <el-dropdown-menu>
+            <el-dropdown-item command="repository">仓库地址</el-dropdown-item>
+          </el-dropdown-menu>
+          <el-dropdown-menu>
             <el-dropdown-item command="logout">退出登陆</el-dropdown-item>
           </el-dropdown-menu>
         </template>
@@ -62,6 +65,9 @@ const handleCommand = (command: string) => {
   }
   else if (command == "index") {
     router.push('/index')
+  }
+  else if (command == "repository") {
+    window.open("https://github.com/underwater133/vue-manage-system")
   }
 }
 </script>

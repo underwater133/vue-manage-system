@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory, RouteRecordRaw, } from 'vue-router'
 import { store } from '@/store/index'
 import { NewMenusObj } from '@/type/common'
 import {pushToNav, clearNav} from '@/utils/pushToNav'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -68,6 +70,7 @@ const getRoute = () => {
 
 
 router.beforeEach((to, from, next) => {
+  NProgress.start() //开始
   const token = localStorage.getItem('token')
   const userinfo = store.state.userinfo
   //login的优先级最高， 如果有登陆过，则会自动跳到index
@@ -120,4 +123,7 @@ router.beforeEach((to, from, next) => {
 
 })
 
+router.afterEach(() => {
+  NProgress.done() //结束
+})
 export default router
