@@ -38,6 +38,13 @@ const getters = {
           newMenus[parentId].children?.push(menus[i])
         }
       }
+      //添加自定义图标
+      //一级菜单的id分别是1 7 12 21
+      newMenus[1].icon = 'GoodsFilled'  //商品
+      newMenus[7].icon = 'List'  //订单
+      newMenus[12].icon = 'Histogram'  //营销
+      newMenus[21].icon = 'Key'  //权限
+
       //自定义列表
       newMenus[1000] = {
         id: 1000,
@@ -47,7 +54,7 @@ const getters = {
         name: 'other',
         level: 0,
         sort: 0,
-        icon: "other",
+        icon: "StarFilled",
         hidden: 0,
         children:[
           //文件上传

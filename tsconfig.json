@@ -17,6 +17,7 @@
       ]
     },
     "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./custom-types.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
