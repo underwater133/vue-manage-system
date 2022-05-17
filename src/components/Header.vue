@@ -26,11 +26,7 @@
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item command="index">首页</el-dropdown-item>
-          </el-dropdown-menu>
-          <el-dropdown-menu>
             <el-dropdown-item command="repository">仓库地址</el-dropdown-item>
-          </el-dropdown-menu>
-          <el-dropdown-menu>
             <el-dropdown-item command="logout">退出登陆</el-dropdown-item>
           </el-dropdown-menu>
         </template>
